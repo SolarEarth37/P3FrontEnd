@@ -1,12 +1,13 @@
 import React from 'react'
-import { navButton } from '../../styles/Styled'
+import { NavButton } from '../../styles/Styled'
+import { Link, Path } from 'react-router-dom'
+import { LinkProps } from 'next/link'
 
-export default function ProgramNameBT() {
-    const handleClick = () => { 
-        
-    }
+export default function ProgramNameBT(buttonText: String, link: Partial<Path>) {
 
   return (
-    <navButton type="button" onClick={handleClick}>Lager management system</navButton>
+    <Link to={link} replace>
+      <NavButton type="button">{buttonText}</NavButton>
+    </Link>
   )
 }

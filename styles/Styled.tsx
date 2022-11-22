@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const navButton = styled.button`
+export const NavButton = styled.button`
     cursor: pointer;
     border: none;
 `
