@@ -1,5 +1,5 @@
 import React from 'react'
-import { Logo1 } from '../../styles/Styled'
+import { Logo1 } from '../Styles/Styled'
 
 export default function Logo() {
   return (

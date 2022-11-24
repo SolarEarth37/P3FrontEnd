@@ -1,10 +1,10 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import DeviceManagementVM from './pageVMs/DeviceManagementVM'
-import FrontPageVM from './pageVMs/FrontPageVM'
-import LoanViewVM from './pageVMs/LoanViewVM'
-import LoginPageVM from './pageVMs/LoginPageVM'
-import MenuPageVM from './pageVMs/MenuPageVM'
+import DeviceManagementVM from './Page/DeviceManagementVM'
+import FrontPageVM from './Page/FrontPageVM'
+import LoanViewVM from './Page/LoanViewVM'
+import LoginPageVM from './Page/LoginPageVM'
+import MenuPageVM from './Page/MenuPageVM'
 
 export default function MainVM() {
     return (
