@@ -2,15 +2,19 @@ import styled from 'styled-components'
 
 export const NavButton = styled.button`
     cursor: pointer;
-    border: none;
+    border: 1px solid black;
     white-space: nowrap;
     overflow: hidden;
-    width: 19vw;
+    width: 15vw;
     height: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    background-color: green;
+    width: 20vw;
 
     &:hover {
         color: #001f3f;
-        background-color: #fff;
+        background-color: greenyellow;
     }
 `
 
@@ -33,11 +37,13 @@ export const ProgramName = styled.h2`
 `
 
 export const Logo1 = styled.div`
-    width: 20vw;
     background-image: url(../public/favicon.ico);
 `
 
 export const Logo2 = styled.div`
-    width: 20vw;
     background-image: url(../public/favicon.ico);
+`
+
+export const Global = styled.div`
+    overflow: hidden;
 `
