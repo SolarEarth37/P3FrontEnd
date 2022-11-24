@@ -1,12 +1,16 @@
 import React from 'react'
 import { NavButton } from '../../styles/Styled'
 import { Link, Path } from 'react-router-dom'
-import { LinkProps } from 'next/link'
 
-export default function ProgramNameBT(buttonText: String, link: Partial<Path>) {
+interface ILink{
+  buttonText: string,
+  navlink: string
+}
+
+export default function Button({buttonText,navlink}: ILink) {
 
   return (
-    <Link to={link} replace>
+    <Link to={navlink} replace>
       <NavButton type="button">{buttonText}</NavButton>
     </Link>
   )
