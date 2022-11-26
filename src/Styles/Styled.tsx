@@ -1,14 +1,30 @@
 import styled from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
-export const NavButton = styled.button`
+export const GlobalBackground = createGlobalStyle`
+    body {
+        background-color: purple;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        background-position: center;
+    }
+`
+
+const GlobalButtonStyle = styled.button`
     cursor: pointer;
+    border: none;
+    text-shadow: 0 2px 1px rgba(28, 28, 28, 0.55);
+`
+
+export const NavButton = styled(GlobalButtonStyle)`
     border: 1px solid black;
     white-space: nowrap;
     overflow: hidden;
-    width: 15vw;
     height: 100%;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     background-color: green;
     width: 20vw;
 
@@ -19,31 +35,58 @@ export const NavButton = styled.button`
 `
 
 export const GridDiv = styled.div`
+    position: fixed;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1em;
     text-align: center;
-    width: 100vw;
-    height: 10vh;
+    height: 20vh;
+    border: 4px solid black;
+    margin: auto;
+    margin-top: 0px;
 
 `
 
 export const ProgramName = styled.h2`
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     background-color: transparent;
-    width: 20vw;
+    text-shadow: 0 2px 1px rgba(28, 28, 28, 0.55);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: default;
 
-`
-
-export const Logo1 = styled.div`
-    background-image: url(../public/favicon.ico);
-`
-
-export const Logo2 = styled.div`
-    background-image: url(../public/favicon.ico);
 `
 
 export const Global = styled.div`
     overflow: hidden;
+`
+
+export const CenterButton = styled(GlobalButtonStyle)`
+    border: 1px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 15vw;
+    text-align: center;
+    font-size: 2.5em;
+    background-color: green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+        color: #001f3f;
+        background-color: greenyellow;
+    }
+`
+
+export const StyledLogo = styled.img`
+    max-width:100%;
+    height:98%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
 `

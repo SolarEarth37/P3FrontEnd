@@ -1,8 +1,8 @@
 import React from 'react'
-import { Logo1 } from '../Styles/Styled'
+import { StyledLogo } from '../Styles/Styled'
 
-export default function Logo() {
+export default function Logo(source: any) {
   return (
-    <Logo1></Logo1>
+    <StyledLogo src={"../-ironspear_hero-2022-hero.jpg"} alt="Logo" />
   )
 }
