@@ -19,8 +19,7 @@ export default function useLoginID({ reload = false }: Props) {
             setUserID(28517391)
         }
 
-
-
+        getUserID()
     }, [reload])
 
     return userID;
