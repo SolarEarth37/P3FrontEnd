@@ -41,7 +41,7 @@ export const GridDiv = styled.div`
     text-align: center;
     height: 20vh;
     border: 4px solid black;
-    margin: auto;
+    margin-bottom: 10px;
     margin-top: 0px;
 
 `
@@ -94,13 +94,39 @@ export const StyledLogo = styled.img`
 export const MenuGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+    width: 90%;
     height: 80vh;
-    margin: 10% auto;
+    margin: 21vh auto;
+    gap: 1em;
         
 `
 
 export const SizeImg = styled.img`
-   height : 80vh;
-   width: 95%;
+   height: 100%;
+   width: 100%;
+`
+
+export const MiddleWindowDiv = styled.div`
+    margin-top: 3em;
+    background-color: aliceblue;
+    height: 70%;
+    width: 40%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    overflow-y: scroll;
+
+    ::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    ::-webkit-scrollbar {
+        width: 1em;
+    }
 `

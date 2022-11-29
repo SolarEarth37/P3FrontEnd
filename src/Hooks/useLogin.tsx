@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { Context } from "../Context";
 
 interface Props {
     reload?: boolean;
@@ -6,6 +7,7 @@ interface Props {
 
 export default function useLoginID({ reload = false }: Props) {
     const [userID, setUserID] = useState<number>();
+    const { updateIsLoggedIn } = useContext(Context);
 
     useEffect(() => {
         async function getUserID() {
@@ -16,6 +18,7 @@ export default function useLoginID({ reload = false }: Props) {
                 return;
             }
             // Temp User ID
+            updateIsLoggedIn(true);
             setUserID(28517391)
         }
 
