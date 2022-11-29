@@ -83,10 +83,24 @@ export const CenterButton = styled(GlobalButtonStyle)`
 `
 
 export const StyledLogo = styled.img`
+    height:95%;
     max-width:100%;
-    height:98%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: relative;
+`
+
+export const MenuGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 80vh;
+    margin: 10% auto;
+        
+`
+
+export const SizeImg = styled.img`
+   height : 80vh;
+   width: 95%;
 `

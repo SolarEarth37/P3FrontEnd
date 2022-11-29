@@ -7,9 +7,9 @@ export default function Banner() {
   return (
     <GridDiv>
       <Button buttonText="PLEASEDONTSHOOT" navlink="/" />
-      <Logo source={"../-ironspear_hero-2022-hero.jpg/"} />
+      <Logo imageSource={"../-ironspear_hero-2022-hero.jpg"} />
       <ProgramName>ScanMat2</ProgramName>
-      <Logo source={"../ukr_fsvdk_mg_4676-20222-artikel.jpg/"} />
+      <Logo imageSource={"../-ukr_fsvdk__mg_4676-2022-artikel.jpg"} />
       <Button buttonText="PLEASEDONTSHOOT" navlink="/" />
     </GridDiv>
   )
