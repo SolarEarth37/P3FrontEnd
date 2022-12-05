@@ -1,9 +1,15 @@
 import React from 'react'
-import useLogout from '../Hooks/useLogout'
+import Banner from '../Composite/Banner'
+import { MiddleWindowDiv } from '../Styles/Styled'
 
 export default function DeviceManagementVM() {
     return (
-        <div>DeviceManagementVM</div>
+        <>
+            <Banner />
+            <MiddleWindowDiv>
+
+            </MiddleWindowDiv>
+        </>
 
     )
 }
