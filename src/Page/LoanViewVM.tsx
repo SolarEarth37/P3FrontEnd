@@ -3,6 +3,7 @@ import Banner from '../Composite/Banner'
 import Loan from '../Composite/Loan'
 import { GlobalBackground, MiddleWindowDiv } from '../Styles/Styled'
 import OverDueLoanButton from '../Base/OverdueLoansButton'
+import CreateLoan from '../Base/CreateLoan'
 
 interface LoanData {
     name?: string,
@@ -27,6 +28,7 @@ export default function LoanViewVM() {
                 ))}
             </MiddleWindowDiv>
             <OverDueLoanButton />
+            <CreateLoan />
         </>
     )
 }

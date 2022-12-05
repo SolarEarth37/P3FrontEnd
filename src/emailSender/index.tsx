@@ -1,4 +1,8 @@
-import nodemailer from "nodemailer"
+export default function fakenews() {
+
+}
+
+/*import nodemailer from "nodemailer"
 
 var transporter = nodemailer.createTransport({
     host: "smtp.office365.com",     // hostname
@@ -28,3 +32,4 @@ transporter.sendMail(details, (err: any) => {
     }
 })
 
+*/

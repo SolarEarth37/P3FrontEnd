@@ -173,8 +173,27 @@ export const OverDueLoansButton = styled(GlobalButtonStyle)`
     font-size: 2.5em;
     background-color: #DDE5B6;
     position: absolute;
-    top: 50%;
-    left: 15%;
+    top: 60%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+        color: #001f3f;
+        background-color: greenyellow;
+    }
+`
+
+export const CreateLoanbutton = styled(GlobalButtonStyle)`
+    border: 1px solid black;
+    white-space: normal;
+    overflow: hidden;
+    width: 15vw;
+    text-align: center;
+    font-size: 2.5em;
+    background-color: #DDE5B6;
+    position: absolute;
+    top: 40%;
+    left: 85%;
     transform: translate(-50%, -50%);
 
     &:hover {
