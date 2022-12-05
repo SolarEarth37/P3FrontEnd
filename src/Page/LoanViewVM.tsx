@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from '../Composite/Banner'
 import Loan from '../Composite/Loan'
 import { GlobalBackground, MiddleWindowDiv } from '../Styles/Styled'
+import OverDueLoanButton from '../Base/OverdueLoansButton'
 
 interface LoanData {
     name?: string,
@@ -24,8 +25,8 @@ export default function LoanViewVM() {
                 {Loans?.map((element, i) => (
                     <Loan dueDate={element.dueDate} key={i} name={element.name} id={i} />
                 ))}
-
             </MiddleWindowDiv>
+            <OverDueLoanButton />
         </>
     )
 }
