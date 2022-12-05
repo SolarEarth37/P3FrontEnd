@@ -1,24 +1,25 @@
 const nodemailer = require('nodemailer');
 
-
-
-
-
-let mailTransporter = nodemailer.createTransport({
-    service: "gmail",
-    auth:{
-        user:"osmanlilian16@gmail.com",
-        pass:"habdbansvdwrebtt"
+var transporter = nodemailer.createTransport({
+    host: "smtp.office365.com",     // hostname
+    secureConnection: false,        // TLS requires secureConnection to be false
+    port: 587,                      // port for secure SMTP
+    tls: {
+        ciphers:'SSLv3'
+    },
+    auth: {
+        user: process.env.MAIL_ADDRESS,
+        pass: process.env.MAIL_PASSWORD
     }
 })
 
 let details = {
-    from: "osmanlilian16@gmail.com",
-    to: "abiraams2001@gmail.com",
-    subject: "idiot",
-    text: "mr abi, youve been kick out from group 23. "
+    from: {senderMail},
+    to: {adminMail},
+    subject: "Overdue Loan Notification",
+    text: "User" + {user} + "has an overdue loan"
 }
-mailTransporter.sendMail(details,(err)=>{
+transporter.sendMail(details,(err)=>{
     if(err){
         console.log("error",err)
     }
