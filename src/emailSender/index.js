@@ -14,8 +14,8 @@ var transporter = nodemailer.createTransport({
 })
 
 let details = {
-    from: {senderMail},
-    to: {adminMail},
+    from: process.env.MAIL_ADDRESS,
+    to: process.env.ADMIN_MAIL,
     subject: "Overdue Loan Notification",
     text: "User" + {user} + "has an overdue loan"
 }
