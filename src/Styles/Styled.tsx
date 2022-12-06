@@ -154,12 +154,8 @@ export const LoanText = styled.h2`
     background-color: transparent;
     text-shadow: 0 2px 1px rgba(28, 28, 28, 0.55);
     position: relative;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     cursor: default;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: auto;
     white-space: nowrap;
 
 `
