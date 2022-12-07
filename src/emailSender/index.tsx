@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer'
 
 export async function mailSender() {
-    var transporter = nodemailer.createTransport({
+    const transporter = nodemailer.createTransport({
         host: "smtp.office365.com",     // hostname
         requireTLS: true,               
         secure: false,                  // TLS requires secureConnection to be false
