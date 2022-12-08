@@ -20,8 +20,6 @@ export async function mailSender({ name }: User) {
         logger: true
     })
 
-    let user = "test"                     // This is where I want to pass the user name from the Loan.tsx file
-
     const info = await transporter.sendMail({
         from: process.env.MAIL_ADDRESS,
         to: process.env.ADMIN_MAIL,
