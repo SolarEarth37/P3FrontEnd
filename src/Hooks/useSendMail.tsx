@@ -10,6 +10,6 @@ export default function useSendMail(name: User) {
     mailSender(name);
 }
 
-export function sendMail() {
+export function useSendMail2() {
     useSendMail({ name: "test" });
 }
