@@ -1,12 +1,10 @@
-import React from 'react'
-
 interface LoanData {
     User: string,
     devices?: number[],
     packages?: number[]
 }
 
-export default function useCreateLoan() {
+export default function useCreateLoan(data: LoanData) {
 
     async function sendData(data = {}, url = '/create') {
 
@@ -28,5 +26,5 @@ export default function useCreateLoan() {
             return await response.json()
         }
     }
-    sendData()
+    sendData(data)
 }
