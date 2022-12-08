@@ -4,8 +4,8 @@ interface User {
     name: string,
 }
 
-export async function mailSender({ name }: User) {
-    const transporter = nodemailer.createTransport({
+export async function useMailSender({ name }: User) {
+    /*const transporter = nodemailer.createTransport({
         host: "smtp.office365.com",     // hostname
         requireTLS: true,
         secure: false,                  // TLS requires secureConnection to be false
@@ -28,4 +28,5 @@ export async function mailSender({ name }: User) {
     });
 
     console.log("Message sent: %s", info.response);
+    */
 }

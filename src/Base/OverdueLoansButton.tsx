@@ -1,11 +1,15 @@
 import React from 'react'
-import { sendMail } from '../Hooks/useSendMail'
+import useSendMail from '../Hooks/useSendMail'
 import { OverDueLoansButton } from '../Styles/Styled'
 
 export default function OverdueLoanButton() {
+    function SendMail() {
+        useSendMail({ name: "John" })
+    }
+
     return (
         <>
-            <OverDueLoansButton type="button" onClick={sendMail}>Get overdue loans</OverDueLoansButton>
+            <OverDueLoansButton type="button" onClick={SendMail}>Get overdue loans</OverDueLoansButton>
         </>
     )
 }
