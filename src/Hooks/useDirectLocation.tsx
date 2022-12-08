@@ -12,6 +12,6 @@ export default function useLoginID() {
             setRedirectString("/")
         }
 
-    }, [])
+    }, [isLoggedIn])
     return redirectString
 }

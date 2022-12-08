@@ -23,7 +23,7 @@ export default function useLoginID({ reload = false }: Props) {
         }
 
         getUserID()
-    }, [reload])
+    }, [reload, updateIsLoggedIn])
 
     return userID;
 }

@@ -9,7 +9,7 @@ export default function useLogout() {
     useEffect(() => {
         updateIsLoggedIn(false);
         navigate("/");
-    }, [])
+    }, [navigate, updateIsLoggedIn])
 
     return;
 }
