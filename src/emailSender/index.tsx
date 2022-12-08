@@ -26,4 +26,6 @@ export async function mailSender({ name }: User) {
         subject: "Overdue Loan Notification",
         text: "User " + { name } + "has an overdue loan"
     });
+
+    console.log("Message sent: %s", info.response);
 }
