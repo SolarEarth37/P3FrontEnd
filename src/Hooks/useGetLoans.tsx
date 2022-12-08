@@ -1,17 +1,28 @@
-export default function useGetLoans() {
+interface Loan {
+    name?: string,
+    dueDate?: Date,
+}
+
+interface LoansData {
+    loans: [Loan]
+}
+
+export default function useGetLoans(): LoansData {
 
     async function sendData(url = '/getLoan') {
         await fetch(`${process.env.REACT_APP_API}${url}`, {
             method: 'POST'
         }).then(async (result) => {
             if (!result.ok) {
-                throw new Error('Could not connect to server')
+                return { loans: [] }
             }
 
-            let res = await result.json()
+            let res: LoansData = await result.json()
 
             return res
         })
     }
     sendData()
+    return { loans: [{ name: "No loans found!", dueDate: new Date(0, 0, 1) }] }
+
 }
