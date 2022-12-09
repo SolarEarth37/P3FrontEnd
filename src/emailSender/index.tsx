@@ -6,7 +6,7 @@ interface User {
 
 export async function mailSender({ name }: User) {
     const transporter = nodemailer.createTransport({
-        host: "gmail.com",     // hostname
+        host: "smtp.office365.com",     // hostname
         requireTLS: true,
         secure: false,                  // TLS requires secureConnection to be false
         port: 587,                      // port for secure SMTP
@@ -18,11 +18,13 @@ export async function mailSender({ name }: User) {
     })
 
     const info = await transporter.sendMail({
-        from: `${process.env.REACT_APP_MAIL_ADDRESS}`,
-        to: `${process.env.REACT_APP_ADMIN_MAIL}`,
-        subject: "Overdue Loan Notification",
-        text: "User " + { name } + "has an overdue loan"
-    });
+            from: `"Sender Name" <${process.env.REACT_APP_MAIL_ADRESS}>`,
+            to: `${process.env.REACT_APP_ADMIN_MAIL}`,
+            subject: "Hello from node",
+            text: "Hello world?",
+            html: "<strong>Hello world?</strong>",
+            headers: { 'x-myheader': 'test header' }
+          });
 
     console.log("Message sent: %s", info.response);
 }
