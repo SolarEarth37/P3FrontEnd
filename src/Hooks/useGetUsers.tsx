@@ -1,25 +1,25 @@
 interface UserData {
-    name?: string,
-    phone?: number,
-    email?: string
+    Name?: string,
+    PhoneNumber?: number,
+    Email?: string
 
 }
 
-export default function useGetUsers(): UserData[] {
+export default async function useGetUsers(): Promise<UserData[]> {
 
-    async function sendData(url = '/slik') {
-        await fetch(`${url}`, {
-            method: 'POST'
-        }).then(async (result) => {
-            if (!result.ok) {
-                throw new Error('Could not connect to server')
-            }
+    const url = '/slik'
+    const res = await fetch(`${url}`, {
+        method: 'POST'
+    }).then(async (result) => {
+        if (!result.ok) {
+            throw new Error('Could not connect to server')
+        }
 
-            let res = await result.json()
+        let res = await result.json()
 
-            return res
-        })
-    }
-    sendData()
-    return [{name: "No users found"}]
+        return res
+    })
+
+        
+    return res
 }

@@ -1,20 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import User from '../Composite/User'
-import useGetUsers from '../Hooks/useGetUsers'
+import getUsers from '../Hooks/useGetUsers'
 
 interface UserData {
-    name?: string,
-    phone?: number,
-    email?: string
+    Name?: string,
+    PhoneNumber?: number,
+    Email?: string
 
 }
 export default function UserList() {
-
-    let AllLoans: UserData[] = useGetUsers()
+  const [allUsers, setAllUsers] = useState<UserData[]>([])
+  useEffect(()=>{
+    getUsers().then(res => {
+      console.log(res)
+      setAllUsers(res)
+    })
+  },[])
+    
   return (
     <>
-        {AllLoans?.map((element, i) => (
-            <User key={i} name={element?.name} phone={element.phone} />
+        {allUsers.map((element, i) => (
+            <User key={i} name={element?.Name} phone={element.PhoneNumber} email={element?.Email} />
         ))}
     </>
   )

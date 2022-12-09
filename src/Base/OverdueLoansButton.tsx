@@ -4,7 +4,6 @@ import { OverDueLoansButton } from '../Styles/Styled'
 
 export default function OverdueLoanButton() {
     function SendMail() {
-        useSendMail()
     }
 
     return (

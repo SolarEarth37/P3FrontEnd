@@ -7,7 +7,7 @@ interface LoansData {
     loans: [Loan]
 }
 
-export default function useGetLoans(): LoansData {
+export default function getLoans(): LoansData {
 
     async function sendData(url = '/getLoan') {
         await fetch(`${url}`, {
