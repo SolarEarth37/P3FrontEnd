@@ -24,6 +24,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "^5.0.1",
+    "request": "^2.79.0",
     "styled-components": "^5.3.6",
     "tls": "^0.0.1",
     "typescript": "^4.9.3",
@@ -32,7 +33,9 @@
   "browser": {
     "fs": false,
     "path": false,
-    "os": false
+    "os": false,
+    "dgram": false,
+    "child_process": false
   },
   "scripts": {
     "start": "react-app-rewired start",
