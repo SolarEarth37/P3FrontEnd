@@ -10,7 +10,7 @@ interface LoansData {
 export default function useGetLoans(): LoansData {
 
     async function sendData(url = '/getLoan') {
-        await fetch(`${process.env.REACT_APP_API}${url}`, {
+        await fetch(`${url}`, {
             method: 'POST'
         }).then(async (result) => {
             if (!result.ok) {

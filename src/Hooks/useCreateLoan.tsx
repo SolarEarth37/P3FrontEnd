@@ -8,7 +8,7 @@ export default function useCreateLoan(data: LoanData) {
 
     async function sendData(data = {}, url = '/create') {
 
-        const response = await fetch(`${process.env.REACT_APP_API}${url}`, {
+        const response = await fetch(`${url}`, {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',

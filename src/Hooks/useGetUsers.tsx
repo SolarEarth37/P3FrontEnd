@@ -1,6 +1,13 @@
-export default function useGetDevices() {
+interface UserData {
+    name?: string,
+    phone?: number,
+    email?: string
 
-    async function sendData(url = '/getDevices') {
+}
+
+export default function useGetUsers(): UserData[] {
+
+    async function sendData(url = '/slik') {
         await fetch(`${url}`, {
             method: 'POST'
         }).then(async (result) => {
@@ -14,4 +21,5 @@ export default function useGetDevices() {
         })
     }
     sendData()
+    return [{name: "No users found"}]
 }

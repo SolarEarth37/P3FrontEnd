@@ -1,7 +1,7 @@
 export default function useGetOverdueLoans() {
 
     async function sendData(url = '/overdue') {
-        await fetch(`${process.env.REACT_APP_API}${url}`, {
+        await fetch(`${url}`, {
             method: 'POST'
         }).then(async (result) => {
             if (!result.ok) {
