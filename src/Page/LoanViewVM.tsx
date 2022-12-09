@@ -19,7 +19,7 @@ interface LoansData {
 }
 
 export default function LoanViewVM() {
-    const [createLoan, setCreateLoan] = useState(Boolean);
+    const [createLoan, setCreateLoan] = useState<boolean>();
     //let dueDate: Date = new Date(2022, 1, 13)
     //let name: string = "John Doe"
 
